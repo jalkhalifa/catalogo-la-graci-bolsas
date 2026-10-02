@@ -4,6 +4,25 @@ Catálogo digital desenvolvido para apresentar os produtos da La Graci Bolsas e 
 
 **[Visitar o site](https://lagracibolsas.com.br/)**
 
+## Prévia do projeto
+
+### Computador
+
+**Página inicial**
+
+![Página inicial da La Graci Bolsas no computador](docs/images/inicio-desktop.png)
+
+**Catálogo e filtros**
+
+![Catálogo da La Graci Bolsas com busca, filtros e produtos no computador](docs/images/catalogo-desktop.png)
+
+### Celular
+
+<p>
+  <img src="docs/images/inicio-mobile.jpeg" alt="Página inicial da La Graci Bolsas no celular" width="280">
+  <img src="docs/images/catalogo-mobile.jpeg" alt="Catálogo da La Graci Bolsas no celular" width="280">
+</p>
+
 ## Objetivo
 
 Organizar a apresentação das bolsas em um catálogo que permita encontrar produtos, consultar detalhes e iniciar uma conversa com a loja pelo WhatsApp. O projeto também inclui um painel para administrar produtos e imagens.
