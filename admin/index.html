@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Administração | La Graci</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <main>
+    <section class="login-view" id="loginView">
+      <form class="login-card" id="loginForm">
+        <p class="eyebrow">La Graci Bolsas</p>
+        <h1>Administração</h1>
+        <p class="muted">Entre com o e-mail e a senha cadastrados.</p>
+        <label>E-mail<input id="loginEmail" type="email" autocomplete="username" required></label>
+        <label>Senha<input id="loginPassword" type="password" autocomplete="current-password" required></label>
+        <button class="button primary" type="submit">Entrar</button>
+        <p class="message" id="loginMessage" role="status"></p>
+        <a class="back-link" href="../">← Voltar ao catálogo</a>
+      </form>
+    </section>
+
+    <section class="dashboard hidden" id="dashboard">
+      <header class="topbar">
+        <div><p class="eyebrow">La Graci</p><h1>Painel de produtos</h1></div>
+        <div class="top-actions">
+          <a class="button secondary" href="../" target="_blank">Ver catálogo</a>
+          <button class="button secondary" id="logoutButton" type="button">Sair</button>
+        </div>
+      </header>
+
+      <div class="notice"><strong>Catálogo conectado</strong><p>Produtos disponíveis salvos neste painel aparecem no catálogo público.</p></div>
+
+      <section class="toolbar">
+        <label class="search"><span>Buscar</span><input type="search" id="adminSearch" placeholder="Nome, coleção ou marca"></label>
+        <button class="button primary" id="newProductButton" type="button">+ Adicionar bolsa</button>
+      </section>
+
+      <p class="message" id="dashboardMessage" role="status"></p>
+      <section class="product-list" id="adminProductList" aria-live="polite"></section>
+    </section>
+  </main>
+
+  <div class="drawer hidden" id="productDrawer" aria-hidden="true">
+    <button class="drawer-backdrop" id="drawerBackdrop" aria-label="Fechar"></button>
+    <section class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="formTitle">
+      <header><div><p class="eyebrow">Cadastro</p><h2 id="formTitle">Nova bolsa</h2></div><button class="icon-button" id="closeDrawer" type="button">×</button></header>
+      <form id="productForm">
+        <input type="hidden" id="productId">
+        <input type="hidden" id="productSlug">
+        <div class="form-grid">
+          <label class="span-2">Nome da bolsa<input id="productName" required></label>
+          <label>Preço à vista — PIX ou dinheiro (R$)<input id="productPrice" type="number" min="0" step="0.01" required></label>
+          <label>Preço no cartão (R$)<input id="productCardPrice" type="number" min="0" step="0.01"></label>
+          <label>Parcelas no cartão<input id="productInstallments" type="number" min="1" max="24" value="3"></label>
+          <label>Ordem de exibição<input id="productOrder" type="number" min="0" value="0"></label>
+          <label>Marca<input id="productBrand" value="La Graci" required></label>
+          <label>Coleção<select id="productCollection"><option value="">Selecione</option><option>Clássica</option><option>Essencial</option><option>Elegance</option></select></label>
+          <label>Modelo principal<input id="productModel" placeholder="Ex.: Hobo, Tote, Flap Bag"></label>
+          <label>Formato completo<input id="productFormat" placeholder="Ex.: Hobo Curvo Compacto"></label>
+          <label>Selo<input id="productBadge" placeholder="Ex.: Lançamento"></label>
+          <label class="span-2">Cores <small>Separe por vírgulas</small><input id="productColors" placeholder="Caramelo, Preto" required></label>
+          <label class="span-2">Estilos <small>Separe por vírgulas</small><input id="productStyles" placeholder="Casual Chic, Urbano Sofisticado"></label>
+          <label class="span-2">Ocasiões <small>Separe por vírgulas</small><input id="productOccasions" placeholder="Trabalho, Jantares, Uso diário"></label>
+          <label class="span-2">Tipos de alça <small>Separe por vírgulas</small><input id="productStraps" placeholder="Ombro, Transversal, Mão"></label>
+          <label>Material<input id="productMaterial" placeholder="Ex.: Sintético / PU"></label>
+          <label>Dimensões<input id="productDimensions" placeholder="Ex.: 26 × 29 cm"></label>
+          <label class="span-2">Compartimentos<input id="productCompartments" placeholder="Bolso interno com zíper, divisória"></label>
+          <label class="span-2">Benefícios<textarea id="productBenefits" rows="3"></textarea></label>
+          <label class="span-2">Descrição<textarea id="productDescription" rows="4"></textarea></label>
+          <label class="span-2 upload-field">Adicionar fotos
+            <input id="productImages" type="file" accept="image/jpeg,image/png,image/webp" multiple>
+            <small>Use JPG, PNG ou WebP. Você pode selecionar várias fotos.</small>
+          </label>
+        </div>
+        <div class="image-preview" id="imagePreview"></div>
+        <div class="checks">
+          <label><input id="productAvailable" type="checkbox" checked> Disponível no catálogo</label>
+          <label><input id="productFeatured" type="checkbox"> Produto em destaque</label>
+        </div>
+        <p class="message" id="formMessage" role="status"></p>
+        <footer><button class="button secondary" id="cancelProduct" type="button">Cancelar</button><button class="button primary" id="saveProduct" type="submit">Salvar produto</button></footer>
+      </form>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../js/supabase-config.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

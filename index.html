@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo digital La Graci Bolsas — elegância para todos os momentos.">
+  <meta name="theme-color" content="#2f211c">
+  <title>La Graci Bolsas | Catálogo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header" id="inicio">
+    <div class="header-top container">
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <a class="wordmark" href="#inicio" aria-label="La Graci Bolsas — início">
+        <span>LA GRACI</span>
+        <small>BOLSAS</small>
+      </a>
+
+      <a class="header-contact" href="https://wa.me/5564992323390" target="_blank" rel="noopener">
+        <span class="contact-icon" aria-hidden="true">
+          <img src="assets/identidade/whatsapp.svg" alt="">
+        </span>
+        Fale conosco
+      </a>
+    </div>
+
+    <nav class="main-nav" id="mainNav" aria-label="Menu principal">
+      <div class="container nav-links">
+        <a href="#colecoes">Escolha por coleção</a>
+        <a href="#lancamentos">Lançamentos</a>
+        <a href="#catalogo">Escolha por modelo</a>
+        <a href="#contato">Contato</a>
+        <a href="#sobre">Sobre Graci</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="benefit-strip" aria-label="Benefícios La Graci">
+      <div class="container benefits">
+        <p><strong>Material premium</strong><span>em cada detalhe</span></p>
+        <p><strong>Atendimento personalizado</strong><span>direto pelo WhatsApp</span></p>
+        <p><strong>Seleção especial</strong><span>modelos escolhidos para você</span></p>
+      </div>
+    </section>
+
+    <section class="hero" id="lancamentos">
+      <div class="hero-track" id="heroTrack">
+        <article class="hero-slide">
+          <img src="assets/banners/lancamento1.png" alt="Lançamento de bolsas La Graci">
+          <div class="hero-shade"></div>
+          <div class="hero-copy container">
+            <p class="kicker">Bolsas & acessórios</p>
+            <img class="hero-logo" src="assets/identidade/logo-la-graci.png" alt="La Graci Bolsas">
+            <h1>Elegância que combina com você.</h1>
+            <div class="hero-actions">
+              <a class="button button-gold" href="#catalogo">Ver coleção</a>
+              <a class="button button-outline" href="https://wa.me/5564992323390" target="_blank" rel="noopener">Falar no WhatsApp</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="hero-slide">
+          <img src="assets/banners/lancamento2.png" alt="Nova coleção La Graci Bolsas">
+          <div class="hero-shade"></div>
+          <div class="hero-copy container">
+            <p class="kicker">Nova coleção</p>
+            <h2>Clássica, sofisticada<br>e indispensável.</h2>
+            <p class="hero-text">Peças versáteis para acompanhar todos os seus momentos.</p>
+            <div class="hero-actions">
+              <a class="button button-gold" href="#catalogo">Conhecer modelos</a>
+              <a class="button button-outline" href="#sobre">Sobre a La Graci</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <button class="slider-arrow slider-prev" id="heroPrev" aria-label="Imagem anterior">‹</button>
+      <button class="slider-arrow slider-next" id="heroNext" aria-label="Próxima imagem">›</button>
+      <div class="slider-dots" id="heroDots" aria-label="Navegação do banner"></div>
+    </section>
+
+    <section class="collection-shortcuts section" id="colecoes">
+      <div class="container">
+        <header class="section-title">
+          <p class="kicker">Escolha por coleção</p>
+          <h2>Encontre a bolsa ideal</h2>
+          <span class="gold-line"></span>
+        </header>
+
+        <div class="collection-grid">
+          <button class="collection-tile" data-collection="Clássica">
+            <span class="collection-top"><span class="collection-number">01</span><span class="collection-count" data-collection-count="Clássica"></span></span>
+            <span class="collection-copy"><strong>Clássicas</strong><small>Elegância atemporal</small></span>
+            <span class="collection-link">Ver seleção <span aria-hidden="true">↗</span></span>
+          </button>
+          <button class="collection-tile" data-collection="Essencial">
+            <span class="collection-top"><span class="collection-number">02</span><span class="collection-count" data-collection-count="Essencial"></span></span>
+            <span class="collection-copy"><strong>Essenciais</strong><small>Para todos os dias</small></span>
+            <span class="collection-link">Ver seleção <span aria-hidden="true">↗</span></span>
+          </button>
+          <button class="collection-tile" data-collection="Elegance">
+            <span class="collection-top"><span class="collection-number">03</span><span class="collection-count" data-collection-count="Elegance"></span></span>
+            <span class="collection-copy"><strong>Elegance</strong><small>Detalhes sofisticados</small></span>
+            <span class="collection-link">Ver seleção <span aria-hidden="true">↗</span></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog section" id="catalogo">
+      <div class="container">
+        <header class="section-title">
+          <p class="kicker">A coleção</p>
+          <h2>Nossas bolsas</h2>
+          <span class="gold-line"></span>
+        </header>
+
+        <div class="catalog-tools" aria-label="Ferramentas do catálogo">
+          <label class="search-field">
+            <span aria-hidden="true">⌕</span>
+            <input type="search" id="searchInput" placeholder="Buscar pelo nome da bolsa" aria-label="Buscar pelo nome da bolsa">
+          </label>
+
+          <label>
+            <span class="sr-only">Ordenar produtos</span>
+            <select id="sortProducts" aria-label="Ordenar produtos">
+              <option value="featured">Destaques</option>
+              <option value="lowest">Menor preço</option>
+              <option value="highest">Maior preço</option>
+              <option value="name">Nome A–Z</option>
+            </select>
+          </label>
+
+          <button class="mobile-filter-button" id="filterToggle" aria-expanded="false">Filtros</button>
+        </div>
+
+        <div class="category-tabs" id="categoryTabs" aria-label="Filtrar por modelo"></div>
+
+        <div class="active-filters" id="activeFilters" aria-live="polite"></div>
+
+        <div class="catalog-layout">
+          <aside class="filters" id="filters" aria-label="Filtros de produtos">
+            <div class="filter-title">
+              <div><span>Refine sua busca</span><h3>Filtros</h3></div>
+              <button id="closeFilters" aria-label="Fechar filtros">×</button>
+            </div>
+
+            <div class="filter-scroll" id="filterGroups"></div>
+
+            <div class="filter-actions">
+              <button class="clear-filters" id="clearFilters" type="button">Limpar</button>
+              <button class="show-results" id="showResults" type="button">Ver <span id="filterResultCount">0</span> bolsas</button>
+            </div>
+          </aside>
+
+          <div class="products-column">
+            <div class="results-line"><strong id="productCount">0</strong> modelos encontrados</div>
+            <div class="product-grid" id="productGrid"></div>
+            <div class="empty-state" id="emptyState">
+              <h3>Nenhuma bolsa encontrada</h3>
+              <p>Tente limpar os filtros ou buscar outro nome.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="payment-section" aria-label="Formas de pagamento">
+      <div class="container">
+        <p class="kicker">Formas de pagamento</p>
+        <div class="payments">
+          <p><span>◇</span><strong>Pix</strong></p>
+          <p><span>▣</span><strong>Cartão de crédito</strong><small>consulte condições</small></p>
+          <p><span>▣</span><strong>Cartão de débito</strong></p>
+          <p><span>▤</span><strong>Dinheiro</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about section" id="sobre">
+  <div class="container about-editorial">
+
+    <div class="about-visual">
+      <div class="about-frame">
+        <img
+          src="assets/identidade/sobre-mim.jpeg"
+          alt="La Graci Bolsas"
+        >
+      </div>
+
+      <div class="about-caption">
+        <span>LA GRACI</span>
+        <small>Curadoria & estilo</small>
+      </div>
+    </div>
+
+    <div class="about-copy">
+
+      <p class="kicker">Sobre a La Graci</p>
+
+      <h2>
+        Escolhas que<br>
+        fazem sentido para você.
+      </h2>
+
+      <span class="about-line"></span>
+
+      <p class="about-intro">
+        Sou Graciele, fundadora da La Graci Bolsas e apaixonada por moda,
+        detalhes e pelo poder que uma boa bolsa tem de expressar
+        personalidade.
+      </p>
+
+      <p>
+        Criei a La Graci com o propósito de oferecer peças selecionadas,
+        com design diferenciado, qualidade e estilo, para que cada mulher
+        encontre uma bolsa que combine não apenas com o seu look, mas
+        também com a sua essência.
+      </p>
+
+      <div class="about-highlight">
+        <span class="about-dot"></span>
+        <div>
+          <strong>Curadoria especial</strong>
+          <p>
+            Cada escolha é feita com cuidado, buscando unir elegância,
+            praticidade e personalidade.
+          </p>
+        </div>
+      </div>
+
+      <p class="about-note">
+        Mais do que vender bolsas, quero proporcionar uma experiência
+        especial e ajudar você a encontrar aquela peça que faz sentido
+        para a sua história.
+      </p>
+
+      <div class="about-details">
+        <span>⌖ Rio Verde · GO</span>
+        <a
+          href="https://www.instagram.com/lagracibolsas"
+          target="_blank"
+          rel="noopener"
+        >
+          ◎ @lagracibolsas
+        </a>
+      </div>
+
+      <a
+        class="button button-gold"
+        href="https://wa.me/5564992323390?text=Olá!%20Vi%20o%20catálogo%20da%20La%20Graci%20e%20gostaria%20de%20mais%20informações."
+        target="_blank"
+        rel="noopener"
+      >
+        Falar com a La Graci
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+    <section class="contact" id="contato">
+      <div class="container contact-inner">
+        <div><p class="kicker">Atendimento La Graci</p><h2>Encontrou a sua favorita?</h2></div>
+        <a class="button button-light" href="https://wa.me/5564992323390" target="_blank" rel="noopener">Falar com a loja</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="wordmark"><span>LA GRACI</span><small>BOLSAS</small></div>
+      <p>Rio Verde · Goiás</p>
+      <p>© <span id="currentYear"></span> La Graci Bolsas</p>
+    </div>
+  </footer>
+
+  <a
+  class="whatsapp-float"
+  href="https://wa.me/5564992323390"
+  target="_blank"
+  rel="noopener"
+  aria-label="Falar no WhatsApp"
+  > 
+  <img src="assets/identidade/whatsapp.svg" alt="" aria-hidden="true">
+  </a>
+
+  <div class="modal" id="productModal" aria-hidden="true">
+  <div class="modal-backdrop" data-close-modal></div>
+
+  <article
+    class="modal-card"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalTitle"
+  >
+    <button
+      class="modal-close"
+      data-close-modal
+      aria-label="Fechar"
+    >
+      ×
+    </button>
+
+    <div class="modal-gallery">
+      <div class="modal-main-image">
+        <button
+          class="gallery-arrow gallery-previous"
+          id="modalPrev"
+          aria-label="Foto anterior"
+        >
+          ‹
+        </button>
+
+        <img id="modalImage" src="" alt="">
+
+        <button
+          class="gallery-arrow gallery-next"
+          id="modalNext"
+          aria-label="Próxima foto"
+        >
+          ›
+        </button>
+
+        <span class="image-counter" id="modalImageCounter"></span>
+      </div>
+
+      <div
+        class="modal-thumbnails"
+        id="modalThumbnails"
+        aria-label="Fotos do produto"
+      ></div>
+    </div>
+
+    <div class="modal-copy">
+      <p class="kicker" id="modalBrand"></p>
+
+      <h2 id="modalTitle"></h2>
+
+      <p id="modalDescription"></p>
+
+      <p class="modal-colors" id="modalColors"></p>
+
+      <dl class="product-details" id="modalDetails"></dl>
+
+      <div class="modal-price" id="modalPrice"></div>
+
+      <a
+        class="button button-gold"
+        id="modalWhatsApp"
+        href="#"
+        target="_blank"
+        rel="noopener"
+      >
+        Tenho interesse
+      </a>
+    </div>
+  </article>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/catalog.js"></script>
+</body>
+</html>
